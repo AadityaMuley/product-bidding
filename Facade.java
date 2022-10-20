@@ -17,9 +17,19 @@ public class Facade {
         Login login = new Login();
         if(userType == 0) {
             authenticationStatus = login.buyerLogin(credentials);
+
+            if(authenticationStatus == true) {
+                PersonBuyer personBuyer = new PersonBuyer();
+                personBuyer.buyerMain();
+            }
         }
         else {
             authenticationStatus = login.sellerLogin(credentials);
+            
+            if(authenticationStatus == true) {
+                PersonSeller personSeller = new PersonSeller();
+                personSeller.sellerMain();
+            }
         }
     }
 
