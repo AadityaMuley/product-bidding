@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class PersonBuyer extends Person {
@@ -22,6 +23,8 @@ public class PersonBuyer extends Person {
             product.showMenu();
         }
     }
+
+    public void createProduct() throws IOException {}
 
     public void buyerMain() throws FileNotFoundException {
 

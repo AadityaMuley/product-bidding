@@ -1,4 +1,4 @@
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -7,7 +7,7 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     
     Facade facade = new Facade();
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[] args) throws IOException{
 
         System.out.println("Enter 0 for Buyer and 1 for Seller");
         int userType = sc.nextInt();
