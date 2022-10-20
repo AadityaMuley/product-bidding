@@ -1,4 +1,4 @@
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 public class Facade {
@@ -9,7 +9,7 @@ public class Facade {
     
     int productType;
 
-    public void login(int user, String username, String password) throws FileNotFoundException {
+    public void login(int user, String username, String password) throws IOException {
 
         userType = user;
         credentials = username + ":" + password;
