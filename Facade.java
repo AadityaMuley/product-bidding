@@ -34,6 +34,23 @@ public class Facade {
         }
     }
 
+    public void createUser(int user) throws IOException {
+
+        CreateUser createUser = new CreateUser();
+
+        if(user == 0) {
+            createUser.createBuyer();
+            System.out.println("New Buyer created! Log in to continue.");
+            System.out.println();
+        }
+        else {
+            createUser.createSeller();
+            System.out.println("New Seller created! Log in to continue.");
+            System.out.println();
+        }
+        Main.main(null);
+    }
+
     public void addOffering(String bid) {
         offeringIterator.add(bid);
         System.out.println("Bid placed successfully!");
