@@ -6,5 +6,9 @@ public abstract class Person {
 
     public abstract void showMenu() throws FileNotFoundException;
 
-    public abstract void createProduct() throws IOException;
+    public void createProduct() throws IOException {}
+
+    public void placeBid() {}
+
+    public void viewBids() {}
 }

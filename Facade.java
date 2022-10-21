@@ -20,7 +20,7 @@ public class Facade {
 
             if(authenticationStatus == true) {
                 PersonBuyer personBuyer = new PersonBuyer();
-                personBuyer.buyerMain();
+                personBuyer.buyerMain(username);
             }
         }
         else {
@@ -33,7 +33,17 @@ public class Facade {
         }
     }
 
-    public void addOffering() {}
+    public void addOffering(String bid) {
 
-    
+        OfferingIterator offeringIterator = new OfferingIterator();
+        offeringIterator.add(bid);
+        System.out.println("Bid placed successfully!");
+        System.out.println();
+    }
+
+    public void displayBids() {
+        OfferingIterator offeringIterator = new OfferingIterator();
+        offeringIterator.displayOfferings();
+        System.out.println();
+    }
 }

@@ -9,8 +9,12 @@ public class Main {
     Facade facade = new Facade();
     public static void main(String[] args) throws IOException{
 
-        System.out.println("Enter 0 for Buyer and 1 for Seller");
+        System.out.println("Enter 0 for Buyer and 1 for Seller and 99 to exit");
         int userType = sc.nextInt();
+
+        if(userType == 99) {
+            System.exit(0);
+        }
 
         System.out.println("Enter your username: ");
         String username = sc.next();
