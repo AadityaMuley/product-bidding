@@ -1,3 +1,6 @@
+// Facade pattern
+// Class to create new user
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -6,6 +9,7 @@ public class CreateUser {
 
     Scanner sc = new Scanner(System.in);
     
+    // Creates a new buyer
     public void createBuyer() {
 
         System.out.println("Enter your username: ");
@@ -27,6 +31,7 @@ public class CreateUser {
         }
     }
 
+    // Creates a new Seller
     public void createSeller() {
 
         System.out.println("Enter your username: ");

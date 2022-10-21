@@ -1,3 +1,6 @@
+// Iterator pattern
+// Functions on products
+
 import java.util.ArrayList;
 
 public class ProductIterator implements ListIterator {

@@ -1,3 +1,6 @@
+// Facade pattern
+// Checks user credentials to log them into the system
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -6,6 +9,7 @@ public class Login {
 
     Scanner sc;
     
+    // Buyer login
     public boolean buyerLogin(String buyerCredentials) throws FileNotFoundException {
 
         boolean buyerAuthentication = false;
@@ -27,6 +31,7 @@ public class Login {
         return(buyerAuthentication);
     }
 
+    // Seller login
     public boolean sellerLogin(String sellerCredentials) throws FileNotFoundException {
 
         boolean sellerAuthentication = false;
