@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class PersonSeller extends Person {
+
+    Facade facade = new Facade();
     Scanner sc = new Scanner(System.in);
 
     public void showMenu() throws FileNotFoundException {
@@ -42,8 +44,12 @@ public class PersonSeller extends Person {
     }
 
     public void viewBids() {
-        Facade facade = new Facade();
         facade.displayBids();
+    }
+
+    public void lockTrade() {
+        Trading trading = new Trading();
+        trading.tradingMain(facade);
     }
 
     public void sellerMain() throws IOException {
@@ -53,6 +59,7 @@ public class PersonSeller extends Person {
             System.out.println("1. View menu");
             System.out.println("2. Add new product");
             System.out.println("3. View all bids");
+            System.out.println("4. Lock a trade");
             System.out.println("99. Logout");
             int choice = sc.nextInt();
 
@@ -70,6 +77,11 @@ public class PersonSeller extends Person {
                 case 3:
                 System.out.println();
                 viewBids();
+                break;
+
+                case 4:
+                System.out.println();
+                lockTrade();
                 break;
 
                 case 99:

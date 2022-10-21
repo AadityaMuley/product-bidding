@@ -53,5 +53,8 @@ public class ProductProduce implements Product {
         fr.append(produce);
         fr.flush();
         fr.close();
+
+		System.out.println("Produce added successfully!");
+		System.out.println();
     }
 }

@@ -5,3 +5,4 @@ Produce:Lettuce
 Produce:Tomato
 Produce:Onion
 Meat:Ham
+Meat:Carrot

@@ -60,7 +60,6 @@ public class PersonBuyer extends Person {
             System.out.println("What would you like to do:");
             System.out.println("1. View menu");
             System.out.println("2. Place Bid");
-            System.out.println("3. View all bids");
             System.out.println("99. Logout");
             int choice = sc.nextInt();
 
