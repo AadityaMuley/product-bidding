@@ -1,3 +1,6 @@
+// Bridge and Factory Method pattern
+// Main class for all Meat products
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -11,6 +14,7 @@ public class ProductMeat implements Product {
 	ProductIterator productIterator = new ProductIterator();
 	ArrayList<String> products = new ArrayList<String>();
 
+	// Displays all the Meat products available
     public void showMenu() throws FileNotFoundException {
 
         if(this.start == true){
@@ -38,6 +42,7 @@ public class ProductMeat implements Product {
         System.out.println();
     }
     
+	// Adds a new meat product
     public void createProduct() throws IOException {
 
         File productInfo = new File("data/ProductInfo.txt");

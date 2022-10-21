@@ -1,3 +1,6 @@
+// Bridge, Factory Method, Iterator, Facade Method pattern
+// Main class for all Buyer operations
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
@@ -7,6 +10,7 @@ public class PersonBuyer extends Person {
     Scanner sc = new Scanner(System.in);
     String username;
 
+    // Factory Method and Bridge pattern to show specific Product to specific Person (in this case the Buyer)
     public void showMenu() throws FileNotFoundException {
         
         System.out.println("1. View Meat menu");
@@ -25,6 +29,7 @@ public class PersonBuyer extends Person {
         }
     }
 
+    // Iterator and Facade pattern to add Buyer's bid
     public void placeBid() {
         Facade facade = new Facade();
 

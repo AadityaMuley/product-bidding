@@ -1,3 +1,6 @@
+// Iterator pattern
+// interface for parsing through products and bid offerings
+
 import java.util.ArrayList;
 
 public interface ListIterator {

@@ -1,3 +1,6 @@
+// Bridge and Factory Method pattern
+// Abstract class to structure Buyer and Seller and acts as a polymorphic bridge between Persons and Products
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
