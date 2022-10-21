@@ -53,5 +53,8 @@ public class ProductMeat implements Product {
         fr.append(meat);
         fr.flush();
         fr.close();
+
+		System.out.println("Meat added successfully!");
+		System.out.println();
     }
 }
