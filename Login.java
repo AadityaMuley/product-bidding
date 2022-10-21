@@ -18,6 +18,7 @@ public class Login {
             if(currCredential.equalsIgnoreCase(buyerCredentials)) {
                 buyerAuthentication = true;
                 System.out.println("Buyer authentication successful!");
+                System.out.println();
                 break;
             }
             currCredential = sc.nextLine();
@@ -38,6 +39,7 @@ public class Login {
             if(currCredential.equalsIgnoreCase(sellerCredentials)) {
                 sellerAuthentication = true;
                 System.out.println("Seller authentication successful!");
+                System.out.println();
                 break;
             }
             currCredential = sc.nextLine();

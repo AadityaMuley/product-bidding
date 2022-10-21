@@ -41,14 +41,19 @@ public class PersonSeller extends Person {
         }
     }
 
+    public void viewBids() {
+        Facade facade = new Facade();
+        facade.displayBids();
+    }
+
     public void sellerMain() throws IOException {
 
-        boolean loop = true;
-        while(loop == true) {
+        while(true) {
             System.out.println("What would you like to do:");
             System.out.println("1. View menu");
-            System.out.println("2. Add your listing");
-            System.out.println("99. Exit");
+            System.out.println("2. Add new product");
+            System.out.println("3. View all bids");
+            System.out.println("99. Logout");
             int choice = sc.nextInt();
 
             switch(choice) {
@@ -62,9 +67,16 @@ public class PersonSeller extends Person {
                 createProduct();
                 break;
 
+                case 3:
+                System.out.println();
+                viewBids();
+                break;
+
                 case 99:
+                System.out.println();
                 System.out.println("Bye!");
-                loop = false;
+                System.out.println();
+                Main.main(null);
                 break;
             }
         }

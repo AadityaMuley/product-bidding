@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PersonBuyer extends Person {
 
     Scanner sc = new Scanner(System.in);
+    String username;
 
     public void showMenu() throws FileNotFoundException {
         
@@ -24,15 +25,43 @@ public class PersonBuyer extends Person {
         }
     }
 
-    public void createProduct() throws IOException {}
+    public void placeBid() {
+        Facade facade = new Facade();
 
-    public void buyerMain() throws FileNotFoundException {
+        System.out.println("1. Place bid on meat item");
+        System.out.println("2. Place bid on produce item");
+        int choice = sc.nextInt();
+        String bid;
 
-        boolean loop = true;
-        while(loop == true) {
+        switch(choice) {
+            case 1:
+            System.out.println();
+            System.out.println("Enter name from existing list of meats:");
+            bid = sc.next();
+            bid = username + ":" + bid;
+            facade.addOffering(bid);
+            break;
+
+            case 2:
+            System.out.println();
+            System.out.println("Enter name from existing list of produce:");
+            bid = sc.next();
+            bid = username + ":" + bid;
+            facade.addOffering(bid);
+            break;
+        }
+    }
+
+    public void buyerMain(String username) throws IOException {
+
+        this.username = username;
+
+        while(true) {
             System.out.println("What would you like to do:");
             System.out.println("1. View menu");
-            System.out.println("99. Exit");
+            System.out.println("2. Place Bid");
+            System.out.println("3. View all bids");
+            System.out.println("99. Logout");
             int choice = sc.nextInt();
 
             switch(choice) {
@@ -41,9 +70,16 @@ public class PersonBuyer extends Person {
                 showMenu();
                 break;
 
+                case 2:
+                System.out.println();
+                placeBid();
+                break;
+
                 case 99:
+                System.out.println();
                 System.out.println("Bye!");
-                loop = false;
+                System.out.println();
+                Main.main(null);
                 break;
             }
         }

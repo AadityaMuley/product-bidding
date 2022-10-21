@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
 public class OfferingIterator implements ListIterator {
-    
-    OfferingList offeringList = new OfferingList();
 
     public boolean hasNext() {
         return(true);
@@ -11,14 +9,20 @@ public class OfferingIterator implements ListIterator {
     public void moveToHead() {}
 
     public void add(String offering) {
-        offeringList.offerings.add(offering);
+        OfferingList.offerings.add(offering);
     }
 
     public void remove(String offering) {
-        offeringList.offerings.remove(offering);
+        OfferingList.offerings.remove(offering);
     }
     
     public ArrayList<String> getList() {
-        return(offeringList.offerings);
+        return(OfferingList.offerings);
+    }
+
+    public void displayOfferings() {
+        for(int i=0; i<OfferingList.offerings.size(); i++) {
+            System.out.println((i+1) + ". " + OfferingList.offerings.get(i));
+        }
     }
 }
