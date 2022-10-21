@@ -33,5 +33,7 @@ public class Facade {
         }
     }
 
+    public void addOffering() {}
+
     
 }

@@ -1,5 +1,7 @@
 Meat:Chicken
 Meat:Beef
 Meat:Pork
-Meat:Beef
 Produce:Lettuce
+Produce:Tomato
+Produce:Onion
+Meat:Ham
