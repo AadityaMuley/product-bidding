@@ -6,3 +6,4 @@ Produce:Tomato
 Produce:Onion
 Meat:Ham
 Meat:Carrot
+Meat:Potato

@@ -42,6 +42,9 @@ public class Main {
 
             case 99:
             System.exit(0);
+            break;
         }
+        
+        System.exit(0);
     }
 }

@@ -24,7 +24,7 @@ public class OfferingIterator implements ListIterator {
         try {
             File userProduct = new File("data/UserProduct.txt");
             FileWriter fw = new FileWriter(userProduct, true);
-            fw.append(OfferingList.offerings.get((Integer.parseInt(offering) - 1)));
+            fw.append("\n" + OfferingList.offerings.get((Integer.parseInt(offering) - 1)));
             fw.flush();
             fw.close();
         } 
